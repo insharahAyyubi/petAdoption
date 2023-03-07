@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto Slab', serif;
+}
+.icon{
+    height: 20px;
+    width: 20px;
+}
+.nav{
+    display: block;
+    padding: 20px 0;
+    background-color: #f4ece1;
+}
+.logo{
+    width:2rem;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+.nav-menu ul{
+    margin: 0;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 300;
+    color:black;
+}
+.home{
+    color:#ff7648;
+}
+.hover:hover{
+    color:#ff7648;
+    transition: 0.2s all ease-in;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    font-size: 1.5rem;
+}
+.signUp, .login{
+    border: 1px solid #ff7648;
+    padding:7px 20px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.login{
+    margin-left: 1rem;
+    background-color: #ff7648;
+    color: aliceblue;
+}
+.signUp:hover{
+    box-shadow: 1px 1px 8px #ff7648;
+}
+.hover2:hover{
+    background-color: #ff7648;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px #E07A5F;
+}
+.jumbotron{
+    background-color: #F9DCC4;
+}
+.catBtn, .dogBtn{
+    margin-right: 0.7rem;
+    border: 1px solid #ea5d2e;
+}
+.hover3:hover{
+    background-color: #ff7648;
+    transition:all 0.4s ease-in-out ;
+}
+.img{
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+}
+.card{
+    box-shadow: 0 0 10px #E07A5F;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.card:active{
+    border: 2px solid #ea5d2e;
+}

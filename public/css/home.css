@@ -15,9 +15,9 @@ h1{
     background-color:#f4ece1;
 }
 .container{
-margin-inline: auto;
-height: 500px;
-margin: 0px 50px 0px 50px;
+    margin-inline: auto;
+    height: 500px;
+    margin: 0px 50px 0px 50px;
 }
 .main{
     margin-inline: auto;
@@ -39,7 +39,6 @@ margin: 0px 50px 0px 50px;
     width:2rem;
 }
 .nav-menu{
-    flex-basis: 730px;
     display: flex;
     align-items: center;
    justify-content: space-between;
@@ -56,7 +55,6 @@ a{
     text-decoration: none;
     display: inline-block;
     font-weight: 500;
-   
     color:black;
 }
 .home{
@@ -104,6 +102,26 @@ a{
     font-size: 20px;
     margin-top: -20px;
     font-family: 'Barlow', sans-serif;
+}
+.adoptButton{
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7648;
+    color: white;
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.hover2:hover{
+    background-color: #ea5d2e;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px #E07A5F;
+}
+.fCol{
+    flex-direction: column;
 }
 .para{
     padding:50px 0 50px 50px;
