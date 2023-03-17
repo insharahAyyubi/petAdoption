@@ -1,42 +1,21 @@
-/* link to color palette
-https://coolors.co/palette/ff7648-f9dcc4-f4ece1-e07a5f */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
-body {
-    font-family: 'Roboto Slab', serif; 
+body{
+    font-family: 'Roboto Slab', serif;
 }
-h1{
-    font-family: 'Amatic SC', cursive;
-}
-.colour{
-    background-color:#f4ece1;
-}
-.container{
-    margin-inline: auto;
-    height: 500px;
-    margin: 0px 50px 0px 50px;
-}
-.main{
-    margin-inline: auto;
-    height: 50px;
-    margin: 10px 50px 0px 50px;
-}
-.flex{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.flex-grow{
-    flex-grow: 1;
+.icon{
+    height: 20px;
+    width: 20px;
 }
 .nav{
-    justify-content: space-between;
+    display: block;
+    padding: 20px 0;
 }
 .logo{
     width:2rem;
@@ -44,12 +23,13 @@ h1{
 .nav-menu{
     display: flex;
     align-items: center;
-   justify-content: space-between;
+    justify-content: space-between;
 }
 ul{
     list-style: none;
 }
 .nav-menu ul{
+    margin: 0;
     justify-content: center;
     gap: 1rem;
     font-size: 1.5rem;
@@ -57,30 +37,31 @@ ul{
 a{
     text-decoration: none;
     display: inline-block;
-    font-weight: 500;
+    font-weight: 300;
     color:black;
 }
 .home{
     color:#ff7648;
 }
-.adopt{
-    text-align: center;
-    font-size: 12rem;
-    font-weight: 100;
-}
 .hover:hover{
- color:#ff7648;
- transition: 0.2s all ease-in;
+    color:#ff7648;
+    transition: 0.2s all ease-in;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .buttons{
     font-size: 1.5rem;
 }
 .signUp, .login{
     border: 1px solid #ff7648;
-    padding:10px 20px;
+    padding:7px 20px;
     font-size: 1rem;
     background-color: #ffffff;
     border-radius: 0.5rem;
+    font-weight: 400;
     cursor: pointer;
 }
 .login{
@@ -91,97 +72,75 @@ a{
 .signUp:hover{
     box-shadow: 1px 1px 8px #ff7648;
 }
+.hover2:hover{
+    background-color: #ff4e13d6;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px #E07A5F;
+    border: 1px solid #fff;
+    color: #fff;
+}
+/* -------------------------------------- */
+
+.main-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 50px 50px 50px;
+}
+.petDiv{
+    background-color: #90270a54;
+    width: 100%;
+}
+.main-body .petImg{
+    height: 400px;
+}
+.main2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #f4ece1;
+}
+.dogfact{
+    display: inline-block;
+}
+.iconc{
+    display: inline-block;
+}
+.card.c2{
+    max-width: 500px;
+}
+.card-text{
+    color: #454545;
+}
+.card-subtitle.health{
+    font-weight: 500;
+}
+.rec{
+    font-weight: 300;
+    display: inline;
+}
+.card-subtitle{
+    color: #808080;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
+}
+.adoptBtn{
+    border: 1px solid #ff7648;
+    padding: 0px 30px;
+    font-size: 2rem;
+    background-color: #ef815df6;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: #fff;
+    width: 100%;
+}
 .flex-dr{
     flex-direction: column;
 }
-.content{
-    position: relative;
-    top:-5%;
-}
-.mous{
-    transform: rotate(180deg);
-}
-.dbuy{
-    font-size: 20px;
-    margin-top: -20px;
-    font-family: 'Barlow', sans-serif;
-}
-.adoptButton{
-    margin-top: 30px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff7648;
-    color: white;
-    padding: 10px 40px;
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-.hover2:hover{
-    background-color: #ea5d2e;
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0 0 10px #E07A5F;
-}
-.fCol{
-    flex-direction: column;
-}
-.para{
-    font-weight: 400;
-    padding:50px 0 50px 50px;
-    min-width: 400px;
-}
-.inline-block{
-    display: inline-block;
-}
-.about{
-    width: 70%;
-    padding: 5% 0 0 15%;
-    margin-inline: auto;
-    height: 500px;
-    margin: 0px 50px 100px 50px;
-}
-.aboutme{
-    font-size: 60px;
-    margin-left:50px;
-}
-.img1{
-    top: 520px;
-    position: absolute;
-    z-index: 2;
-    right: 200px; 
-}
-.img2{
-    left: 100px;
-    position: relative;
-    z-index: 1;
-}
-.img3
-{
-    top: 60%; 
-    transform: rotate(45deg);
-    position: absolute;
-    left: 80%;
-}
-.img4
-{
-    position: absolute;
-    top: 50%;
-    left: 75%;
-}
-.img5
-{
-    position: absolute;
-    top: 80%;
-}
-.img6
-{
-    position: absolute;
-    top: 70%;
-    right: 80%;
-}
-
-/* ---------------- */
+/* -------------------------------------------- */
 footer{
     position: relative;
     bottom: 0;
@@ -228,7 +187,7 @@ margin: 20px 0 0 0;
     background-color: #ff7648;
 }
 
-p{
+footer p{
     margin-right: 100px;
 }
 .centerbox{

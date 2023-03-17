@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Petlify</title>
     <link rel="stylesheet" href="\public\css\home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/2d4e9f7759.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2d4e9f7759.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class="main">
@@ -22,13 +22,13 @@
                 </div>
                 <ul class="flex">
                     <li><a href="" class="home hover">Home</a></li>
-                    <li><a href="" class="hover">Products</a></li>
+                    <li><a href="testimonial" class="hover">Testimonials</a></li>
                     <li><a href="" class="hover">Gallery</a></li>
-                    <li><a href="" class="hover">Contact</a></li>
+                    <li><a href="#contact" class="hover">Contact</a></li>
                 </ul>
                 <div class="buttons">
-                    <button class="signUp" type="submit">SignUp</button>
-                    <a href="register.html"><button class="login hover2" type="submit">Login</button></a>
+                    <a href="register"><button class="signUp" type="submit">SignUp</button></a>
+                    <a href="register"><button class="login hover2" type="submit">Login</button></a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="dbuy flex fCol">
                         <h2>DON'T BUY</h2>   
-                        <a href="adopt.html"><button class="adoptButton hover2">Find Your Pet!</button></a>
+                        <a href="adoptCat"><button class="adoptButton hover2">Find Your Pet!</button></a>
                     </div>   
             </div>
             
@@ -57,9 +57,8 @@
         <h1 class="aboutme">ABOUT ME</h1>
         <div class="flex">
             <div class="para">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, totam inventore! Nam, architecto tempora. Quos, quidem. Quo odio optio nemo, fugiat obcaecati ipsam adipisci rem consequuntur earum officiis? Distinctio, commodi!
-                    Quidem eligendi, ut provident alias praesentium odit dolorem minus suscipit nostrum velit voluptas cum qui quis? Tenetur, voluptatem adipisci cumque corporis odit quos autem explicabo ad possimus temporibus cupiditate officiis.
-                  </p>
+                <p>Petlify is an organization that has been rescuing stray and street pets since 2010. This non-profit organization helps shelter and rescues homeless cats and dogs. We keep our pets physically and mentally healthy so they can find their best-fit homes. Our small organization shelters over 2,000 cats and dogs by providing quality food and the best medical care. We understand that our pets need caring people that keep them happy, and healthy, and give them unconditional love.
+                </p>
             </div>
             
             <div class="imgBox">
@@ -74,7 +73,7 @@
         
     </div>
     
-        <footer>
+        <footer id="contact">
             <div class="main-content">
               <div class="left box">
                <h2 class="heading">Help</h2>
@@ -135,5 +134,6 @@
               </div>
         </footer>
     <script src="/server.js"></script>
+    <script src="\public\js\register.js"></script>
 </body>
 </html>

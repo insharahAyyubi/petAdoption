@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petlify</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="\public\css\template.css">
+</head>
+<body>
+    <div class="main">
+    <div class="nav">
+        <div class="nav-menu container">
+            <div>
+                <i class="fa-solid fa-paw fa-xl"></i>
+            </div>
+            <ul class="flex">
+                <li><a href="home" class="home hover">Home</a></li>
+                <li><a href="" class="hover">Products</a></li>
+                <li><a href="" class="hover">Gallery</a></li>
+                <li><a href="#contact" class="hover">Contact</a></li>
+            </ul>
+            <div class="buttons">
+                <button class="signUp" type="submit">SignUp</button>
+                <a href="register"><button class="login hover2" type="submit">Login</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body">
+        <div class="petDiv flex mb-3">
+        <img class="petImg" src="\public\Images\dog<%=id%>.jfif">
+        </div>
+
+        <div class="main2">
+        <div class="card c1 m-3">
+            <div class="card-body">
+              <h2 class="card-title mb-3"><%=name%></h2>
+              <h5 class="card-subtitle mb-2">
+                <%=breed%>
+                <img src="\public\Images\period_grey.png">
+                <%=city%>
+              </h5>
+              <hr>
+              <p>
+              <%=age%> <img src="\public\Images\period.png">
+                <%=gender%> <img src="\public\Images\period.png">
+                <%=height%>
+              </p>
+              <hr>
+              <div>
+                <h3 class="card-title mb-3">About</h3>
+                <h5 class="card-subtitle health mb-2">Health</h5>
+                <p class="card-text"><%=health%></p>
+              </div>
+              <hr class="mb-4">
+              <img src="\public\Images\bell.png">
+              <p class="card-subtitle fst-italic rec">Petlify recommends that you should always have prior knowledge about the pet breed before adopting.</p>
+            </div>
+          </div>
+          <div class="flex flex-dr">
+          <div class="card c2 mb-2 p-3">
+            <div class="iconc">
+            <img class="mb-3" src="\public\Images\asset 13.svg" height="30px">
+            <h2 class="card-title dogfact mb-3 mx-3">Dog Fact</h2> </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem quas corporis aspernatur eligendi sed eveniet dolorum, labore amet deserunt non dolorem! Enim excepturi cupiditate dolore hic pariatur at? Amet, accusantium?</p>
+          </div>
+          <a href="adoptForm">
+           <button type="submit" class="adoptBtn btn btn-block hover2">Adopt</button></a>
+        </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="main-content">
+          <div class="left box">
+           <h2 class="heading">Help</h2>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium eligendi quia amet laborum quae modi qui distinctio, aperiam reiciendis sunt harum ipsa, animi accusamus nulla dolor provident velit aut.
+                </p>
+                <div class="social">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a> 
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>  
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a> 
+                </div>
+            </div>
+          </div>
+
+        <div class="centerbox">
+            <h2 class="heading">Address</h2>
+            <div class="phone sub">
+                <span class="ic fas fa-phone-alt"></span>
+                <span class="text">091-00225</span>  
+            </div>
+            <div class="email sub">
+                <span class="ic fas fa-envelope"></span>
+                <span class="text">abc@gmail</span>  
+            </div>
+          
+            <div class="place sub">
+              <span class="ic fas fa-map-marker-alt"></span>
+              <span class="text">Jamia Nagar</span>  
+            </div>
+          </div>
+
+          <div class="rightbox">
+            <h2 class="heading">Contact us</h2>
+            <div class="content">
+                <form action="#">
+                    <div class="email">
+                        <div class="text">Email</div>
+                        <input type="email" required>
+                    </div>
+                    <div class="msg">
+                      <div class="text" >Message</div>  
+                      <textarea cols="20" rows="3" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+          </div>
+         
+        </div>
+        <div class="endNote">
+            <p>
+                <i class="fa-regular fa-copyright"></i>
+                2023 Copyright Petlify. All Rights Reserved
+            </p>
+          </div>
+    </footer>
+</div>
+<script src="/server.js"></script>
+<script src="https://kit.fontawesome.com/2d4e9f7759.js" crossorigin="anonymous"></script>
+</body>
+</html>

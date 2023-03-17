@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto Slab', serif;
+    background: url('/public/Images/bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: #061d4f;
+    font-size: 7rem;
+    text-align: center;
+}
+h3{
+    font-weight: 400;
+    color: #061d4f;
+    font-size: 2rem;
+}
+hr{
+    clear:both;
+    display:block;
+    width: 100%;               
+    border: 1px solid gray;
+}
+.thanks{
+    flex-direction: column;
+}

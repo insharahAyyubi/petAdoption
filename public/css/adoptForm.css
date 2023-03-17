@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    color: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background-color: #f4ece1;
+
+
+    align-items: center;
+    padding:10px;
+}
+.fa-solid, .fas{
+    font-weight: 900;
+}
+.fa-sm{
+    font-size: 0.75em;
+    vertical-align: -0.125em;
+}
+.container{
+ max-width: 500px;
+ width:100%;   
+ padding: 25px 30px;
+ border-radius: 25px;
+ background: linear-gradient(135deg,#ff7648,#f4ece1);
+}
+.container .heading{
+font-size:40px;
+position: relative;
+text-align: center;
+padding: 0 0 0 0;
+font-family:'Amatic SC', cursive;
+font-weight:700;
+}
+
+.container .heading::before{
+ content:'';
+ position:absolute;
+ height: 3px;
+ left:0;
+ bottom:0;
+ width:100%;
+ background: white;
+}
+.container form .card-details{
+  /* margin-top: 25px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .card-details .card-box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px ;
+}
+.card-details .card-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.card-details .card-box input{
+    height:30px; 
+    width: 200%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+    border: white;
+}
+form .circal-form .circal-title{
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+}
+form .circal-form .category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form .button{
+    text-align: center;
+}
+form button{
+    padding: 10px 0;
+    margin-top: 5px;
+    /* height: 100%; */
+    width: 50%;
+    outline:none;
+    color:black;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: #ff7648;
+    transition: 0.3s;
+}
+form button:hover{
+    background: white;
+    box-shadow: 5px 5px 2px #ff7648;
+}
