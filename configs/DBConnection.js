@@ -14,4 +14,16 @@ connection.connect(function (err) {
     console.log("Database connected!");
 });
 
+connection.query(
+    "CREATE TABLE IF NOT EXISTS users(userid INT NOT NULL AUTO_INCREMENT, username varchar(20) NOT NULL, email varchar(255) NOT NULL, password varchar(255) NOT NULL, PRIMARY KEY(userid));",
+    (err, result) => {
+        if(err){
+            console.log(err);
+        } else {
+            console.log("Table users created");
+        }
+    }
+);
+
+
 export default connection;

@@ -39,3 +39,17 @@ hr{
 .thanks{
     flex-direction: column;
 }
+.home{
+    background-color: #012b85e9;
+    color: aliceblue;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.home:hover{
+    background-color: #061d4f;
+}

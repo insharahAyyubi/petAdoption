@@ -1,111 +1,122 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 body{
-    color: black;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
     background-color: #f4ece1;
-
-
-    align-items: center;
-    padding:10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+   }
+   
+   .wrapper{
+       position: absolute;
+       width: 400px;
+       height: 600px;
+       background: transparent;
+       border: 2px solid rgba(255, 255, 255, .5);
+       border-radius: 20px;
+       backdrop-filter: blur(20px);
+       box-shadow: 0 0 30px rgba(244, 41, 10, 0.5);
+       transition: scale(0);
+       margin-top: 45px;
+   }
+   .wrapper .form-box{
+    width: 100%;
+    padding: 40px;
 }
-.fa-solid, .fas{
-    font-weight: 900;
+.wrapper .form-box .login{
+    transition: transform .18s ease;
+    transform: translateX(0);
 }
-.fa-sm{
-    font-size: 0.75em;
-    vertical-align: -0.125em;
-}
-.container{
- max-width: 500px;
- width:100%;   
- padding: 25px 30px;
- border-radius: 25px;
- background: linear-gradient(135deg,#ff7648,#f4ece1);
-}
-.container .heading{
-font-size:40px;
-position: relative;
-text-align: center;
-padding: 0 0 0 0;
-font-family:'Amatic SC', cursive;
-font-weight:700;
-}
-
-.container .heading::before{
- content:'';
- position:absolute;
- height: 3px;
- left:0;
- bottom:0;
- width:100%;
- background: white;
-}
-.container form .card-details{
-  /* margin-top: 25px; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #e07a5f;
+    font-size: 2.5rem;
+    color: #fff;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
 }
 
-form .card-details .card-box{
-    width: calc(100% / 2 - 20px);
-    margin-bottom: 15px ;
+.flex{
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
-.card-details .card-box .details{
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-.card-details .card-box input{
-    height:30px; 
-    width: 200%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid white;
-    padding-left: 15px;
-    font-size: 16px;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-}
-.card-details .card-box input:focus,
-.card-details .card-box input:valid{
-    border: white;
-}
-form .circal-form .circal-title{
-    font-size: 15px;
-    font-weight: 500;
-    border-bottom: 2px solid;
-}
-form .circal-form .category{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-form .button{
-    text-align: center;
-}
-form button{
-    padding: 10px 0;
+.paw{
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
+   }
+   .form-box h2{
+       font-size: 4rem;
+       margin: 0;
+       font-family: 'Amatic SC', cursive;
+       color: #e07a5f;
+       text-align: center;
+   }
+   .input-box{
+       position: relative;
+       width: 100%;
+       height: 50px;
+       border-bottom: 2px solid #e07a5f;
+       margin: 30px 0;
+   }
+   .box1{
     margin-top: 5px;
-    /* height: 100%; */
-    width: 50%;
-    outline:none;
-    color:black;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    background: #ff7648;
-    transition: 0.3s;
+    }
+   .input-box input:focus~label,
+   .input-box input:valid~label{ 
+       top: -5px;
+   }
+   .input-box label{
+       position: absolute;
+       top:50%;
+       left:5px;
+       transform: translate(-50%);
+       font-size: 1rem;
+       color: #707070;
+       font-weight: 600;
+       pointer-events: none;
+       transition: .5s;
+       margin-left: 15px;
+   }
+   .input-box input{
+       width: 80%;
+       height: 100%;
+       background: transparent;
+       border: none;
+       outline: none;
+       font-size: 0.9rem;
+       color: #e07a5f;
+       font-weight: 600;
+       padding: 0 35px 0 5px;
+   }
+   .input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #302f2ff6;
+    line-height: 57px;
 }
-form button:hover{
-    background: white;
-    box-shadow: 5px 5px 2px #ff7648;
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #e07a5f;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 0.8em;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover{
+ background: #fc6f40;;
 }

@@ -1,82 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/head')%>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\public\css\adoptForm.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/640de24d51.js" crossorigin="anonymous"></script>
-    <title>Adoption Form</title>
 </head>
 <body>
-  <div class="container">
-   <div class="heading">
-      <i class="fa-solid fa-paw fa-sm"></i>
-      DETAILS!
-   </div>
-     <form action="#">
-        <div class="card-details">
-           <div class="card-box">
-             <span class="details">Full Name</span>
-             <input type="text" placeholder="Enter your name">
-           </div>
-        </div>
-        
-         <div class="card-details">
-            <div class="card-box">
-              <span class="details">Phone Number</span>
-              <input type="phone" placeholder="Enter your phone number">
-            </div>
+      <div class="wrapper flex">
+         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+         <div class="form-box login">
+               <div class="flex">
+                  <img src="\public\Images\paw-print.png" class="paw">
+                  <h2>Details</h2>
+               </div>
+               <form action="/adoptForm" method="post">
+                  <div class="input-box box1">
+                     <span class="icon"><ion-icon name="person"></ion-icon></span>
+                     <input type="text" name="fullName" required>
+                     <label>Full Name</label>
+                  </div>
+                  <div class="input-box">
+                     <span class="icon"><ion-icon name="call"></ion-icon></span>
+                     <input type="tel" name="phone" required>
+                     <label>Phone no</label>
+                  </div>
+                  <div class="input-box">
+                     <span class="icon"><ion-icon name="home"></ion-icon></span>
+                     <input type="text" name="address" required>
+                     <label>Address</label>
+                  </div>
+                  <div class="input-box">
+                     <span class="icon"><ion-icon name="map"></ion-icon></span>
+                     <input type="text" name="city" required>
+                     <label>City</label>
+                  </div>
+                  <div class="input-box">
+                     <span class="icon"><ion-icon name="navigate"></ion-icon></span>
+                     <input type="text" name="state" required>
+                     <label>State</label>
+                  </div>
+                 <button type="submit" class="btn">Adopt</button>
+               </form>
          </div>
-         <div class="card-details">
-            <div class="card-box">
-              <span class="details">Address</span>
-              <input type="address" placeholder="Enter your address">
-            </div>
-         </div>
-        
-         <div class="card-details">
-            <div class="card-box">
-              <span class="details">City</span>
-              <input type="text" placeholder="Enter your city">
-            </div>
-         </div>
-         <div class="card-details">
-            <div class="card-box">
-              <span class="details">State</span>
-              <input type="text" placeholder="Enter your state">
-            </div>
-         </div>
-         <div class="card-details">
-            <div class="card-box">
-              <span class="details">Pincode</span>
-              <input type="password" name="pin" maxlength="6" placeholder="Enter pincode">
-            </div>
-         </div>
-         <div class="card-details">
-            <div class="card-box">
-              <span class="details">Time slot</span>
-              <input type="time">
-            </div>
-         </div>
-         <div class="circal-form">
-            <span class="circal-title">Gender</span>
-            <div class="category">
-                <input type="radio" name="gender">Male
-                <input type="radio" name="gender">Female
-                <input type="radio" name="gender">Other
-            </div>
-         </div>
-         <a href="thanks">
-         <button type="button">Submit</button></a>
-         <!-- <div class="button">
-            <input type="submit" value="Submit">
-         </div> -->
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
      </form>
   </div> 
-  <script src="/server.js"></script>
 </body>
 </html>

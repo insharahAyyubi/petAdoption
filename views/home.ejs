@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/head')%>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petlify</title>
     <link rel="stylesheet" href="\public\css\home.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2d4e9f7759.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div class="main">
+    <div class="main">
         <div class="nav">
             <div class="nav-menu">
-                <div class="icon">
-                    <i class="fa-solid fa-paw fa-xl"></i>
-                </div>
+                <i class="fa-solid fa-paw fa-xl"></i>
                 <ul class="flex">
                     <li><a href="" class="home hover">Home</a></li>
                     <li><a href="testimonial" class="hover">Testimonials</a></li>
-                    <li><a href="" class="hover">Gallery</a></li>
                     <li><a href="#contact" class="hover">Contact</a></li>
                 </ul>
                 <div class="buttons">
+                    <% if(!user) { %>
                     <a href="register"><button class="signUp" type="submit">SignUp</button></a>
-                    <a href="register"><button class="login hover2" type="submit">Login</button></a>
+                    <a href="login"><button class="login hover2" type="submit">Login</button></a>
+                    <% } else { %>
+                    <a href="logout"><button class="login hover2" type="submit">Logout</button></a>
+                    <% } %>
                 </div>
             </div>
         </div>
@@ -72,68 +62,8 @@
         </div>
         
     </div>
-    
-        <footer id="contact">
-            <div class="main-content">
-              <div class="left box">
-               <h2 class="heading">Help</h2>
-                <div class="content">
-                    <p >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laudantium eligendi quia amet laborum quae modi qui distinctio, aperiam reiciendis sunt harum ipsa, animi accusamus nulla dolor provident velit aut.
-                    </p>
-                    <div class="social">
-                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a> 
-                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>  
-                      <a href="#"><i class="fa-brands fa-youtube"></i></a> 
-                    </div>
-                </div>
-              </div>
-    
-            <div class="centerbox">
-                <h2 class="heading">Address</h2>
-                <div class="phone sub">
-                    <span class="ic fas fa-phone-alt"></span>
-                    <span class="text">091-00225</span>  
-                </div>
-                <div class="email sub">
-                    <span class="ic fas fa-envelope"></span>
-                    <span class="text">abc@gmail</span>  
-                </div>
-              
-                <div class="place sub">
-                  <span class="ic fas fa-map-marker-alt"></span>
-                  <span class="text">Jamia Nagar</span>  
-                </div>
-              </div>
-    
-              <div class="rightbox">
-                <h2 class="heading">Contact us</h2>
-                <div class="content">
-                    <form action="#">
-                        <div class="email">
-                            <div class="text">Email</div>
-                            <input type="email" required>
-                        </div>
-                        <div class="msg">
-                          <div class="text" >Message</div>  
-                          <textarea cols="20" rows="3" required></textarea>
-                        </div>
-
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-              </div>
-             
-            </div>
-            <div class="endNote">
-                <p>
-                    <i class="fa-regular fa-copyright"></i>
-                    2023 Copyright Petlify. All Rights Reserved
-                </p>
-              </div>
-        </footer>
     <script src="/server.js"></script>
     <script src="\public\js\register.js"></script>
+    <%- include('partials/footer')%>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<%- include('partials/head')%>
+<head>
+    <link rel="stylesheet" href="\public\css\register.css">
+</head>
+<body>
+    <div class="wrapper lgHght flex">
+        <a href="home">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span></a>
+    <div class="form-box login">
+        <div class="flex">
+            <img src="\public\Images\paw-print.png" class="paw">
+            <h2>Login</h2>
+        </div>
+        <form action="/login" method="post">
+            <div class="infoMsg hidden">
+                <% if( messages.error ) { %>
+                    <p><%= messages.error %></p>
+                        <script>
+                            document.querySelector('.lgHght').style.height = "480px";
+                            document.querySelector('.infoMsg').classList.remove('hidden');
+                        </script>
+                <% } %>
+                <% if(typeof message != 'undefined') { %>
+                    <p><%= message %></p>
+                        <script>
+                            document.querySelector('.lgHght').style.height = "480px";
+                            document.querySelector('.infoMsg').classList.remove('hidden');
+                        </script>
+                <% } %>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="text" name="email" required>
+                <label class="em">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forget">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button class="loginBtn btn" type="submit">Login</button>
+            <div class="login-register">
+                <p>Dont't have an account?<a href="register" class="register-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
