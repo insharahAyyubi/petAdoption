@@ -1,24 +1,31 @@
 *{
+    font-family: 'Roboto Slab', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 9px;
+    font-size: 12px;
     text-align: center;
+   
+}
+h1{
+    margin-top: 3rem;
+    font-size: 3rem;
+    color: #ee7b55;
 }
 body{
-    font-family: 'Roboto Slab', serif; 
     height: 100vh;
     width: 100vw;
-    background-color: #f4ece1;
-    display: flex;
+    background-color: #f2f2f2;
+   
+
     justify-content: center;
     align-items: center;
-    flex-direction: row;
 }
 
 section{
     height: 100vh;
     width: 70vw;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +39,7 @@ section .content .image{
     width: 90px;
     border-radius: 50%;
     padding: 3px;
-    background-color: #ff7648;
+    background-color:#e4ece1 ;
     position: relative;
     z-index: 1;
 }
@@ -45,12 +52,12 @@ border: 3px solid white;
 }
 
 .content{
-    
     position: relative;
     background-color: #fff;
     border-radius: 50px;
     padding: 15px 17px;
     width: 200px;
+   
 }
 .content::before{
     content: "";
@@ -59,36 +66,69 @@ border: 3px solid white;
     width: 100%;
     top: 0;
     border-radius: 0px 50px 0px 0px;
-    background-color:  #fea283d0;
+    background-color:  #ee7b55;
 }
 .box .content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
+.social{
+    margin-top: 10px;
+  
+}
+.social i{
+    opacity: .7;
+    margin: 0px 2px;
+    transition: transform .8s 0s ease-out;
+}
+.social i:hover{
+    cursor: pointer;
+    opacity: 1;
+    transform: rotateY(180deg);
 }
 
+
 .info{
-    font-size: 1.8rem;
     margin: 10px 0px;
     width: 90%;
-    color: #000;
+    color: #909090;
 }
 .name{
-    font-size: 15px;
-    font-weight: 500;
-    color: #ff7648;
+font-size: 15px;
+font-weight: 500;
+color:#ee7b55;
 }
 .job{
-    font-size: 1.3rem;
     margin-top: 3px;
-    color: rgba(161, 87, 56, 0.87);
+    color: #909090;
+}
+.contact{
+    margin-top: 10px;
+}
+.contact .contact-btn{
+padding: 4px 10px ;
+border-radius: 10px;
+border: none;
+font-size: 9px;
+background-color: #ee7b55;
+color: white;
+font-weight: 500;
+}
+.contact-btn:hover{
+    cursor: pointer;
+   
+}
+.arrow{
+    cursor: pointer;
 }
 
 .swiper-pagination-bullet{
     height: 4px;
     width: 19px;
     border-radius: 25px;
-    background-color: blueviolet;
+    background-color:#ee7b55;
     
 }

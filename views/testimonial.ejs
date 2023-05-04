@@ -1,219 +1,71 @@
-<%- include('partials/head')%>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+          <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- font icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
     <link rel="stylesheet" href="\public\css\testimonial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2d4e9f7759.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
-
-<!--     
-    <section>
-        <h2>Testimonials</h2>
-    </section> -->
+    <h1>Testimonials</h1>
     <section id="test" >
           <div class="swiper mySwiper container">
             <div class="swiper-wrapper box">
                 <div class="swiper-slide card">
                     <div class="content">
                         <div class="image">
-                            <img src="\public\Images\t1.jfif">
+                            <img src=https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg alt="">
                         </div>
                         <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
+                            "I cannot express enough how grateful I am to have found my new best friend through this website. I was a bit hesitant at first, but I'm so glad I took the chance. My dog, Luna, has brought so much love and happiness into my life, and I don't know what I'd do without her".
                         </div>
                         <div class="name-job">
-                            <p class="name">Sherlin Handa</p>
-                            <hr>
-                        </div>
-                        <div class="job">Manager at CrossLab</div>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t2.webp">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Shreya Maheshwari</p>
-                            <hr>
-                        </div>
-                        <div class="job">Student at Harvard</div>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t3.jfif">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Amir Husain</p>
-                            <hr>
-                        </div>
-                        <div class="job">Doctor</div>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t1.jfif">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Sherlin Handa</p>
-                            <hr>
-                        </div>
-                        <div class="job">Manager at CrossLab</div>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t2.webp">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Shreya Maheshwari</p>
-                            <hr>
-                        </div>
-                        <div class="job">Student at Harvard</div>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t3.jfif">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Amir Husain</p>
-                            <hr>
-                        </div>
-                        <div class="job">Doctor</div>
-                    </div>
-                </div>  <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t1.jfif">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Sherlin Handa</p>
-                            <hr>
-                        </div>
-                        <div class="job">Manager at CrossLab</div>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t2.webp">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Shreya Maheshwari</p>
-                            <hr>
-                        </div>
-                        <div class="job">Student at Harvard</div>
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="\public\Images\t3.jfif">
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Amir Husain</p>
-                            <hr>
-                        </div>
-                        <div class="job">Doctor</div>
-                    </div>
-                </div>
-             
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg" alt="">
-                        </div>
-                        <div class="social">
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Elon Musk</p>
-                            <hr>
-                         
-                        </div>
-                        <div class="contact">
-                            <button class="contact-btn">contact</button>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg" alt="">
-                        </div>
-                        <div class="social">
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Elon Musk</p>
-                            <hr>
-                         
-                        </div>
-                        <div class="contact">
-                            <button class="contact-btn">contact</button>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="swiper-slide card">
-                    <div class="content">
-                        <div class="image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg" alt="">
-                        </div>
-                        <div class="social">
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                        </div>
-                        <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
-                        </div>
-                        <div class="name-job">
-                            <p class="name">Elon Musk</p>
+                            <p class="name">Michael</p>
                             <hr>
                            
                         </div>
-                        <div class="contact">
-                            <button class="contact-btn">contact</button>
+                    </div>
+                </div>
+                <div class="swiper-slide card">
+                    <div class="content">
+                        <div class="image">
+                            <img src=https://t4.ftcdn.net/jpg/02/24/86/95/240_F_224869519_aRaeLneqALfPNBzg0xxMZXghtvBXkfIA.jpg alt="">
+                        </div>
+            
+                        <div class="info">
+                            "I adopted my cat, Oliver, through this website and it was the best decision I ever made. He is the sweetest, most loving cat and has become such an important part of my life. Thank you for helping me find him!"
+                        </div>
+                        <div class="name-job">
+                            <p class="name">James</p>
+                            <hr>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide card">
+                    <div class="content">
+                        <div class="image">
+                            <img src=https://image.shutterstock.com/image-photo/portrait-young-latin-woman-pleasant-260nw-2151833739.jpg alt="">
+                        </div>
+                
+                        <div class="info">
+                            "Adopting my dog, Charlie, through this website was such a seamless and stress-free experience. The staff was so helpful and accommodating, and I could tell they genuinely cared about finding the perfect home for their animals. Charlie is now a beloved member of our family and I couldn't imagine life without him."
+                        </div>
+                        <div class="name-job">
+                            <p class="name">Emma</p>
+                            <hr>
                         </div>
                         
                     </div>
@@ -221,36 +73,40 @@
                 <div class="swiper-slide card">
                     <div class="content">
                         <div class="image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg" alt="">
+                            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZZKReAvyp0-BwiO_QMNnznUASdi0Qg5G0ekOmOOgkCvvAJ7wgJLpI6ZZereSU5wKI5E&usqp=CAU alt="">
                         </div>
-                        <div class="social">
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-github"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                        </div>
+                    
                         <div class="info">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ex officia molestias numquam eveniet laudantium mollitia fuga eos maxime minus!
+                            "I never thought I'd be able to find the perfect cat for my family, but this website made it possible. The search filters made it easy to find a cat that fit our lifestyle, and the adoption process was a breeze. We now have the sweetest cat named Luna, and she has brought so much joy into our home."
                         </div>
                         <div class="name-job">
-                            <p class="name">Elon Musk</p>
+                            <p class="name">Amanda</p>
                             <hr>
-                          
                         </div>
-                        <div class="contact">
-                            <button class="contact-btn">contact</button>
+                    </div>
+                </div>
+                <div class="swiper-slide card">
+                    <div class="content">
+                        <div class="image">
+                            <img src=https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg alt="">
                         </div>
-                        
+                      
+                        <div class="info">
+                            "I adopted my dog, Buddy, through this website and he has changed my life in so many ways. He has become my constant companion and has helped me through some of my toughest times. Thank you for bringing us together."
+                        </div>
+                        <div class="name-job">
+                            <p class="name">John</p>
+                            <hr>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-       <div class="swiper-button-next"></div>
+    <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
-       
-   
+    </section>
 
-          
       <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 

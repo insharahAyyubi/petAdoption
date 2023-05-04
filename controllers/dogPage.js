@@ -1,6 +1,15 @@
 import connection from "../configs/DBConnection.js";
+import fetch from "node-fetch";
 
 let viewDog = async (req,res) => {
+    // let jsonData = {};
+    // async function logJSONData() {
+    //     const response = await fetch("https://dogapi.dog/api/v2/facts");
+    //      jsonData = await response.json();
+      
+    //   }
+    //   logJSONData();
+    //   console.log(jsonData);
     const id = req.params.id;
     connection.query('SELECT * FROM dogdetails WHERE dogID = ?', [id], (err, results, fields) => {
         if(err)
@@ -9,7 +18,8 @@ let viewDog = async (req,res) => {
             return res.status(400).send();
         }
         const dogData = results[0];
-        res.render("template", {pet:"dog", id:id, ...dogData});
+        res.render("template", { pet:"dog", id:id,
+          ...dogData});
     });
 };
 let viewCat = async (req,res) => {
@@ -45,3 +55,4 @@ let viewCardCat = async(req, res) => {
 };
 
 export {viewDog, viewCat, viewCardDog, viewCardCat};
+

@@ -1,8 +1,5 @@
 import { validationResult } from "express-validator";
-import auth from "../validation/auth.js";
-import app from "express";
 import loginService from "../services/loginService.js";
-let router = app.Router();
 
 let handleLogin = async(req, res) => {
     let errorsArr = [];

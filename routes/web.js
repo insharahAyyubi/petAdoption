@@ -6,6 +6,7 @@ import loginController from "../controllers/loginController.js"
 import passport from "passport";
 import initPassportLocal from "../controllers/passportLocalController.js";
 import adoptForm from "../controllers/adoptForm.js";
+import contact from "../controllers/contact.js";
 
 let router = app.Router();
 
@@ -14,6 +15,7 @@ initPassportLocal();
 let initWebRoutes = (app) => {
     router.get('/template/dog/:id', dogPage.viewDog);
     router.get('/template/cat/:id', dogPage.viewCat);
+    router.post('/contact', contact.contactUser);
     // register route
     router.post(
         '/register', 
@@ -41,8 +43,9 @@ let initWebRoutes = (app) => {
     router.get('/template/:pet/:id/adoptForm' ,
         loginController.checkLoggedIn, function (req, res, next) {   
             if(req.user) {
-                res.render("adoptForm");
+                res.render("adoptForm", {id:req.params.id, pet:req.params.pet});
             }
+            console.log(req.params);
         })
     
     router.post('/adoptForm', adoptForm.apply);

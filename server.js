@@ -41,9 +41,6 @@ app.use(function (req, res, next) {
 app.get('/', (req,res) => {
     res.render('home');
 })
-app.get('/home', (req,res) => {
-    res.render('home');
-})
 app.get('/register', (req,res) => {
     res.render('register');
 })
@@ -58,6 +55,9 @@ app.get('/template/:pet/login', (req,res) => {
 })
 app.get('/template/:pet/register', (req,res) => {
     res.render('register');
+})
+app.get('/template/:pet/testimonial', (req,res) => {
+    res.render('testimonial');
 })
 app.get('/testimonial', (req,res) => {
     res.render('testimonial');

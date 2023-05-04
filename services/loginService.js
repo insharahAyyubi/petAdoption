@@ -1,26 +1,6 @@
 import connection from "../configs/DBConnection.js";
 import bcrypt from "bcrypt";
 
-let handleLogin = (email, password) => {
-    return new Promise(async (resolve, reject) => {
-        //check email is exist or not
-        let user = await findUserByEmail(email);
-        if (user) {
-            //compare password
-            await bcrypt.compare(password, user.password).then((isMatch) => {
-                if (isMatch) {
-                    resolve(true);
-                } else {
-                    reject(`Password entered is incorrect`);
-                }
-            });
-        } else {
-            reject(`This user email doesn't exist`);
-        }
-    });
-};
-
-
 let findUserByEmail = (email) => {
     return new Promise((resolve, reject) => {
         try{
@@ -50,8 +30,8 @@ let findUserById = (userid) => {
                         reject(err)
                     }
                     let user = rows[0];
-                    console.log("dcdsc");
                     console.log(user);
+                    
                     resolve(user);
                 }
             );
@@ -78,4 +58,4 @@ let comparePassword = (password, userObject) => {
     });
 };
 
-export default { handleLogin, comparePassword, findUserByEmail, findUserById };
+export default { comparePassword, findUserByEmail, findUserById };

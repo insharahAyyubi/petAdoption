@@ -25,5 +25,4 @@ connection.query(
     }
 );
 
-
 export default connection;

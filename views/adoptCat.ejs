@@ -13,8 +13,8 @@
                         <i class="fa-solid fa-paw fa-xl"></i>
                     </div>
                     <ul class="flex">
-                        <li><a href="home" class="home hover">Home</a></li>
-                        <li><a href="" class="hover">Products</a></li>
+                        <li><a href="/" class="home hover">Home</a></li>
+                        <li><a href="testimonial" class="hover">Testimonials</a></li>
                         <li><a href="#contact" class="hover">Contact</a></li>
                     </ul>
                     <div class="buttons">
@@ -43,16 +43,20 @@
         <div class="album py-5 bg-light">
           <div class="container">
             <% if (typeof data != 'undefined') {%>
+              <% var c = 0; %>
               <% for(i in data) { %>
-                <% if(i%4==0) { %>
-                  <% if(i!=0 ) { %>
-                    </div>
+                <% if(data[i].adopted == 'no') { %> 
+                  <% if(c%4==0) { %>
+                    <% if(c!=0 ) { %>
+                      </div>
+                    <% } %>
+                    <div class="row mb-5">
                   <% } %>
-                  <div class="row mb-5">
-                <% } %>
-                    <div class="col-md-3"  onclick="location.href = 'template/cat/<%= data[i].catID %>';">
+                    <div class="col-md-3 cardNo<%=data[i].catID%>"  onclick="location.href = 'template/cat/<%= data[i].catID %>';">
                       <div class="card mb-4 me-3">
+                        <% if(data[i].adopted == 'no') { %>
                         <img src="\public\Images\cat<%= data[i].catID %>.jfif" class="card-img-top img">
+                        <%}%>
                         <div class="card-body">
                           <h5 class="card-title"><%= data[i].Name %></h5>
                           <p class="card-text"><%= data[i].AgeGroup %>
@@ -63,147 +67,11 @@
                         </div>
                       </div>
                     </div>
+                    <% c=c+1; %>
+                <% } %> 
               <% } %>
-               </div>
-            <% } %>
-            <!-- <div class="row mb-5">
-              <div class="col-md-3" onclick="location.href = 'template/cat/1';">
-                <div class="card mb-4 me-3">
-                  <img src="\public\Images\cat1.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Byron</h5>
-                    <p class="card-text">Kitten 
-                      <img src="\public\Images\period.png"/>
-                       Domestic Short Hair</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
               </div>
-
-              <div class="col-md-3">
-                <div class="card mb-4 me-3" onclick="location.href = 'template/cat/2';">
-                  <img src="\public\Images\cat2.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Forbes</h5>
-                    <p class="card-text">Young 
-                      <img src="\public\Images\period.png"/>
-                       American Short Hair</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="card mb-4 me-3" onclick="location.href = 'template/cat/3';">
-                  <img src="\public\Images\cat3.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Garfield</h5>
-                    <p class="card-text">Young 
-                      <img src="\public\Images\period.png"/>
-                       Domestic Short Hair</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="card mb-4 me-3" onclick="location.href = 'template/cat/4';">
-                  <img src="\public\Images\cat4.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Cleo</h5>
-                    <p class="card-text">Young
-                      <img src="\public\Images\period.png"/>
-                       Domestic Short Hair</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-5">
-              <div class="col-md-3" onclick="location.href = 'template/cat/5';">
-                <div class="card mb-4 me-3">
-                  <img src="\public\Images\cat5.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Ruhi</h5>
-                    <p class="card-text">Kitten 
-                      <img src="\public\Images\period.png"/>
-                       American Short Hair</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="card mb-4 me-3" onclick="location.href = 'template/cat/6';">
-                  <img src="\public\Images\cat6.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Maha</h5>
-                    <p class="card-text">Kitten 
-                      <img src="\public\Images\period.png"/>
-                       Scottish Fold</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="card mb-4 me-3" onclick="location.href = 'template/cat/7';">
-                  <img src="\public\Images\cat7.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Sassy</h5>
-                    <p class="card-text">Young 
-                      <img src="\public\Images\period.png"/>
-                       American Short Hair</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="card mb-4 me-3" onclick="location.href = 'template/cat/8';">
-                  <img src="\public\Images\cat8.jfif" class="card-img-top img">
-                  <div class="card-body">
-                    <h5 class="card-title">Oliver</h5>
-                    <p class="card-text">Adult
-                      <img src="\public\Images\period.png"/>
-                       British Short Hair</p>
-                       <p class="card-text">
-                        7 miles away
-                      </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+          <%}%>
           </div>
         <%- include('partials/footer')%>
       </main>

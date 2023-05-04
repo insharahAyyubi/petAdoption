@@ -4,7 +4,8 @@
 </head>
 <body>
       <div class="wrapper flex">
-         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+         <a href="/">
+         <span class="icon-close"><ion-icon name="close"></ion-icon></span></a>
          <div class="form-box login">
                <div class="flex">
                   <img src="\public\Images\paw-print.png" class="paw">
@@ -36,6 +37,8 @@
                      <input type="text" name="state" required>
                      <label>State</label>
                   </div>
+                  <input type="hidden" id="petId" name="petID" value="<%=id%>">
+                  <input type="hidden" id="pet" name="pet" value="<%=pet%>">
                  <button type="submit" class="btn">Adopt</button>
                </form>
          </div>

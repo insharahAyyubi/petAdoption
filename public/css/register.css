@@ -15,7 +15,7 @@ body{
        backdrop-filter: blur(20px);
        box-shadow: 0 0 30px rgba(244, 41, 10, 0.5);
        margin-top: 75px;
-       transition: all 0.4s ease-in-out;
+       transition: all 0.3s ease-in;
    }
     .regHght{
         height: 515px;

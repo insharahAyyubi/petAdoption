@@ -10,6 +10,4 @@ catBtn.addEventListener("click", () => {
     catBtn.classList.add("selected");
     dogBtn.classList.remove("selected");
 })
-card.addEventListener("click", () => {
-    
-})
+

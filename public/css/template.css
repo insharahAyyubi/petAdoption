@@ -24,7 +24,7 @@ body{
 .nav-menu{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 ul{
     list-style: none;
@@ -107,10 +107,13 @@ a{
     display: inline-block;
 }
 .iconc{
+    text-align: center;
+    background-color: #ffdfd6;
+    border-radius: 10px;
     display: inline-block;
 }
 .card.c2{
-    max-width: 500px;
+    max-width: 400px;
 }
 .card-text{
     color: #454545;

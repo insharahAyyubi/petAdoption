@@ -13,8 +13,8 @@
                         <i class="fa-solid fa-paw fa-xl"></i>
                     </div>
                     <ul class="flex">
-                        <li><a href="home" class="home hover">Home</a></li>
-                        <li><a href="" class="hover">Products</a></li>
+                        <li><a href="/" class="home hover">Home</a></li>
+                        <li><a href="testimonial" class="hover">Testimonials</a></li>
                         <li><a href="#contact" class="hover">Contact</a></li>
                     </ul>
                     <div class="buttons">
@@ -43,14 +43,16 @@
         <div class="album py-5 bg-light">
           <div class="container">
             <% if (typeof data != 'undefined') {%>
+              <% var c = 0; %>
               <% for(i in data) { %>
-                <% if(i%4==0) { %>
-                  <% if(i!=0 ) { %>
-                    </div>
+                <% if(data[i].adopted == 'no') { %>
+                  <% if(c%4==0) { %>
+                    <% if(c!=0 ) { %>
+                      </div>
+                    <% } %>
+                    <div class="row mb-5">
                   <% } %>
-                  <div class="row mb-5">
-                <% } %>
-                    <div class="col-md-3"  onclick="location.href = 'template/dog/<%= data[i].dogID %>';">
+                    <div class="col-md-3 cardNo<%=data[i].dogID%>"  onclick="location.href = 'template/dog/<%= data[i].dogID %>';">
                       <div class="card mb-4 me-3">
                         <img src="\public\Images\dog<%= data[i].dogID %>.jfif" class="card-img-top img">
                         <div class="card-body">
@@ -63,6 +65,8 @@
                         </div>
                       </div>
                     </div>
+                    <% c=c+1; %>
+                <% } %>
               <% } %>
                </div>
             <% } %>
